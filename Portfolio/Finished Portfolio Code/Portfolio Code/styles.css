@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  background-color: #35393D;
+  color: white;
+  padding: 0.75rem 0;
+}
+
+header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-logo {
+  height: 60px;
+  width: auto;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.site-subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  background-color: white;
+  color: #35393D;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.section-card {
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 1.75rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.section-card h2, 
+.section-card h3, 
+.section-card h4 {
+  margin-top: 0;
+}
+
+.about-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.about-layout > div {
+  flex: 2;
+}
+
+.about-layout aside {
+  flex: 1;
+}
+
+.about-layout img {
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.section-card ul {
+  padding-left: 1.2rem;
+}
+
+.section-card li {
+  margin-bottom: 0.35rem;
+}
+
+.map-block {
+  margin-top: 1.4rem;
+}
+
+.map-block p {
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+}
+
+.map-block img {
+  display: block;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.section-card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 0.75rem 0 1rem;
+}
+
+footer {
+  background-color: #35393D;
+  color: white;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.contact-photo {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 1rem 0;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  overflow: hidden;
+  aspect-ratio: 4 / 3; 
+  background: #222;
+  border-radius: 10px;
+}
+
+.gallery .slide {
+  display: flex;
+  height: 100%; 
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   
+  display: block;
+  flex-shrink: 0;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 2.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.arrow.left {
+  left: 0.5rem;
+}
+
+.arrow.right {
+  right: 0.5rem;
+}
+
+body.work-page h2 {
+  text-align: center;
+}
+
+body.work-page h2 + p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0.5rem auto 1.5rem auto;
+}
+
+/* Improve spacing between headings and paragraphs on section-card pages */
+.section-card h2 {
+  margin-bottom: 1rem;     /* space under the main heading */
+}
+
+.section-card h3 {
+  margin-top: 1.75rem;     /* space above project subheadings */
+  margin-bottom: 0.5rem;   /* space under subheadings */
+}
+
+.section-card p {
+  margin-bottom: 1.25rem;  /* space under paragraphs */
+  line-height: 1.6;        /* improves readability */
+}
+
+/* Add strong spacing between project blocks */
+.section-card .project-block {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;   /* subtle separator line */
+}
+
+
+
+@media (max-width: 500px) {
+
+  header .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .site-logo {
+    height: 45px;
+  }
+
+  .site-title {
+    font-size: 1.3rem;
+  }
+
+  .site-subtitle {
+    font-size: 0.8rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    padding-left: 0;
+  }
+
+  nav a {
+    padding: 0.28rem 0.6rem;
+    font-size: 0.85rem;
+    border-radius: 16px;
+    white-space: nowrap;
+  }
+
+  main {
+    padding: 1rem 0;
+  }
+
+  .section-card {
+    padding: 1rem;
+  }
+
+  .about-layout {
+    flex-direction: column;
+  }
+
+  .about-layout aside {
+    order: -1;
+    text-align: center;
+  }
+
+  .about-layout aside img {
+    margin: 0 auto 0.75rem;
+  }
+
+  .contact-photo,
+  .map-block img {
+    max-width: 100%;
+  }
+}
+
